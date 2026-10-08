@@ -37,7 +37,7 @@ export default function AboutUs() {
   return (
     <>
       <h1>{about.name}</h1>
-      <img className="AboutUs-photo" src={about.imageUrl} alt={about.name} />
+      <img className="AboutUs-photo" src={`${import.meta.env.VITE_SERVER_HOSTNAME}${about.imageUrl}`} alt={about.name} />
       {about.paragraphs.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
       ))}
